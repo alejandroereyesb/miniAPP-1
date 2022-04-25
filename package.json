@@ -1,0 +1,38 @@
+{
+  "name": "miniapp",
+  "version": "1.0.0",
+  "description": "miniAPP",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francospatz/miniAPP.git"
+  },
+  "author": "Franco Spatz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francospatz/miniAPP/issues"
+  },
+  "homepage": "https://github.com/francospatz/miniAPP#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-fileupload": "^1.2.1",
+    "firebase": "^8.6.8",
+    "firebase-admin": "^10.0.2",
+    "helmet": "^5.0.2",
+    "mongoose": "^6.3.0",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2",
+    "xhr2": "^0.2.1"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.10"
+  }
+}

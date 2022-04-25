@@ -1,0 +1,39 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/style.css")
+        title miniAPP
+    body 
+
+        nav
+            ul
+                li
+                    a(href="/") Product List
+                li
+                    a(href="/addproduct") Add product
+
+        if show === 'list'
+        
+            section 
+                if list 
+                    each product in list  
+                        img(src=product.image, alt=product.name)
+                        p Name: #{product.name}       
+                        p Price: #{product.price}   
+                        p Description: #{product.description}
+                        
+        else if show === 'form'   
+
+            form(action="/addproduct", method="post", enctype="multipart/form-data") 
+                label(for="name") Name:
+                input(type="text", name="name" required)
+                label(for="price") Price:
+                input(type="text", name="price" required)
+                label(for="description") Description:
+                input(type="text", name="description" required)
+                label(for="product_img") Image:
+                input.form__file(type="file", name="product_img" required)
+                button(type="submit") Save 
