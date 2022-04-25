@@ -2,6 +2,10 @@
 
 MiniAPP Express con Pug de formulario de producto (nombre, precio, descripción) + input para subir imágen a Firebase Cloud Storage y guardar en un documento de Mongo datos y URL de la imagen.
 
+# Link a la app lanzada en Heroku
+
+https://product-miniapp.herokuapp.com/
+
 # Configuración para inicializar en localhost
 Instala las dependencias
 ```
