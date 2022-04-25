@@ -28,7 +28,7 @@ const listen = async () => {
         })
     }
     catch (error) {
-        console.log(error);
+        console.log("Error: " + error);
     }
 }
 
