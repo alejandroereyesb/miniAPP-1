@@ -1,5 +1,6 @@
 const productDB = require('../models/product_model');
 
+// Trae los productos y los renderiza en la vista
 const get = async (req, res) => {
     try {
         const allProducts = await productDB.getProducts();
@@ -9,6 +10,7 @@ const get = async (req, res) => {
     }
 }
 
+// Renderiza el formulario
 const form = (req, res) => {
     try {
         res.render('index', { show: 'form' });
@@ -17,6 +19,7 @@ const form = (req, res) => {
     }
 }
 
+// Guarda en la base de datos
 const save = async (req, res) => {
     try {
         let imgURL = req.file.firebaseUrl;

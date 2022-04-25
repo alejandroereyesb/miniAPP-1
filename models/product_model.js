@@ -1,5 +1,6 @@
 const Product = require('./product_schema');
 
+// Trae todos los productos de la base de datos
 const getProducts = async () => {
     try {
         return await Product.find({});
@@ -8,6 +9,7 @@ const getProducts = async () => {
     }
 }
 
+// Crea un producto en la base de datos
 const createPorduct = async (product, url) => {
     try {
         const newProduct = new Product(product);
