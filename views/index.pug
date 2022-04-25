@@ -5,35 +5,41 @@ html(lang="es")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/css/style.css")
-        title miniAPP
-    body 
+        link(rel="icon" type="image/x-icon" href="/img/tortilla.ico")
+        title TortillApp
 
-        nav
-            ul
-                li
-                    a(href="/") Product List
-                li
+    header(class="header")
+        div(class="titleContainer")
+            h1(class="title") TortillApp
+            img(class="titleImg" src="/img/tortilla.png")
+        nav(class="nav")
+            ul(class="ul")
+                li(class="li")
+                    a(href="/", class="a") Product List
+                li(class="li", class="a")
                     a(href="/addproduct") Add product
 
+    body 
         if show === 'list'
         
-            section 
+            section(class="section")
                 if list 
-                    each product in list  
-                        img(src=product.image, alt=product.name)
-                        p Name: #{product.name}       
-                        p Price: #{product.price}   
-                        p Description: #{product.description}
+                    each product in list
+                        div(class="product") 
+                            img(src=product.image, alt=product.name, class="img")
+                            p(class="p") #{product.name}       
+                            p(class="p") #{product.price}   
+                            p(class="p") #{product.description}
                         
         else if show === 'form'   
 
-            form(action="/addproduct", method="post", enctype="multipart/form-data") 
-                label(for="name") Name:
-                input(type="text", name="name" required)
-                label(for="price") Price:
-                input(type="text", name="price" required)
-                label(for="description") Description:
-                input(type="text", name="description" required)
-                label(for="product_img") Image:
-                input.form__file(type="file", name="product_img" required)
-                button(type="submit") Save 
+            form(action="/addproduct", method="post", enctype="multipart/form-data", class="form") 
+                label(for="name", class="label") Name:
+                input(type="text", name="name", class="input" required)
+                label(for="price", class="label") Price:
+                input(type="text", name="price", class="input" required)
+                label(for="description", class="label") Description:
+                input(type="text", name="description", class="input" required)
+                label(for="product_img", class="label") Image:
+                input(type="file", name="product_img", class="inputFile" required)
+                button(type="submit", class="button") Save 
