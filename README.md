@@ -36,3 +36,6 @@ Inicializa el proyecto
 ```
 npm start 
 ```
+# Demo
+![demo](https://user-images.githubusercontent.com/98749703/165025249-898685a3-b85a-4da3-aa03-237ed3d6481d.gif)
+
